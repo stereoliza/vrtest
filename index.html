@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>First_attempt • A-Frame</title>
+    <meta name="descripsss" content="F">
+    <script src="aframe.js"></script>
+  </head>
+  <body>
+    <a-scene background="color: black">
+      <a-assets>
+          <a-asset-item id="left" src="https://cdn.glitch.com/b4ed5e70-f9ae-4611-937b-02a96efa1c7b%2Fleft.glb?v=1617141137620"></a-asset-item>
+          <a-asset-item id="sat" src="https://cdn.glitch.com/b4ed5e70-f9ae-4611-937b-02a96efa1c7b%2Ffirstdraft.glb?v=1617144708069"></a-asset-item>  
+      </a-assets>
+
+      <a-entity id="music" geometry="primitive: plane" material="color: blue" position="-10 0 0" sound="src: https://cdn.glitch.com/b4ed5e70-f9ae-4611-937b-02a96efa1c7b%2FSad%20piano%20beet%202.2%20-%2013_07_2019%2C%2014.54.mp3?v=1617144414581; autoplay: true"></a-entity>
+
+      <a-image id="venus" material="alphaTest: 0.07" src="content/venus.png" position="-0.34158 0.98177 -0.61363"></a-image>
+      <a-image id="sign" src="content/sign.png" position="1.2 1 -5"></a-image>
+      <a-entity id="right" rotation="0 0 0" animation="property: position; to: -1 0 0.3;  dur: 9000">
+          <a-image src="content/right.png" position="2.3 2 -2.2" rotation="0 -15 5"></a-image>
+      </a-entity>
+      
+      <a-entity id="left" rotation="0 0 0" animation="property: position; to: 0 1 0;property: rotation; to: -10 0 -18;  dur: 8000">
+         <a-entity position="-1.4 1.5 -2" rotation="20 20 40" gltf-model="#left"></a-entity>
+      </a-entity>
+      
+      
+	<a-entity id="sat" rotation="0 0 0" animation="property: rotation; to: 360 360 0; loop: true; dur: 9000">
+        <a-entity position="-6 3.9 -6" scale ="0.7" gltf-model="#sat"></a-entity>
+      </a-entity>
+
+
+    </a-scene>
+  </body>
+</html>
